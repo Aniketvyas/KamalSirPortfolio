@@ -1,0 +1,145 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+    <section>
+        <nav class="navbar navbar-expand-lg fixed-top wow fadeInDown bg-nav" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInDown;">
+            <img src="{% static 'images/50766518-b7b4-49b4-996f-e4c8435f3a75_200x200.png' %}" width="100px" height="50px;">
+
+            <button class="navbar-toggler" style="border-color: rgb(38, 16, 30);" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active m-2" id="nav-item">
+                        <a class="nav-link font-weight-bold" id="nav-link" href="/" style="font-weight: 400px;;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item m-2" id="nav-item">
+                        <a class="nav-link font-weight-bold" id="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown m-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Education
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown m-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Research
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown m-2">
+                        <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Achievements
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item m-2"><a href="teachingAids" class="nav-link font-weight-bold">Teaching Aids</a></li>
+                    <li class="nav-item m-2"><a class="nav-link font-weight-bold">Gallery</a></li>
+                    <li class="nav-item m-2"><a class="nav-link font-weight-bold">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="bg-jumbo" id="top-section">
+        <section class="pt-xl-5 mb-5 pb-5" id="home">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-8 col-md-8 col-sm-12 align-items-center" id="over">
+                            <div class="color-filled-subheading pt-5 text-slider-items">
+                                <h4 class="main-heading-2 wow bounceIn pt-3 pb-3" id="typed-heading" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;">Picture Gallery</h5>
+                                    <span id="text-slider"></span>
+                            </div>
+                            <div class="no-color-subheading text-muted">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem officiis ad officia ab consequuntur culpa facilis aliquam, assumenda perferendis magni! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, aspernatur
+                                </p>
+                            </div><br>
+                        </div>
+
+                        <div class="col-xl-5 col-md-4 mt-3 mt-md-5 landing-image wow fadeIn" style="visibility: visible;; animation-name: fadeIn; overflow:hidden" id="over-2">
+                            <img src="{% static 'images/undraw_image_options_7uph.svg' %}" class="img-fluid pt-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="container-fluid">
+        <div class="">
+            <div class="col-xl-12 col-md-12">
+                <div class="row p-1 m-3">
+                    {% for i in gallery %}
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-xs-12" id="card-po" style="overflow:hidden;object-fit: cover;">
+                        <div class="card align-items-center card-3">
+                            <div class="card-body gallery">
+                                <img src="/media/{{i.image}}" class="image">
+                                <div class="overlay">
+                                    <div class="text">{{i.caption}}<br>
+                                        <p class="text-white">{{i.date}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <ul class="pagination justify-content-center">
+                    
+                    {% if gallery.has_previous %}
+                    <li class="page-item">
+                    <a class="page-link py-2 px-3" href="?page={{ gallery.previous_page_number }}">
+                        <span>&laquo;</span>
+                    </a>
+                    </li>
+                    {% endif %}
+                    {% for num in gallery.paginator.page_range %}
+                        {% if gallery.number == num %}
+                            <li class="page-item active"><span class="page-link active">{{ num }}</span></li>
+                        {% elif num > gallery.number|add:'-3' and num < gallery.number|add:'3' %}
+                            <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if gallery.has_next %}
+                        <li class="page-item"><a class="page-link py-2 px-3" href="?page={{ gallery.next_page_number }}">
+                            <span>&raquo;</span>
+                        </a></li>
+                      
+                    {% endif %}
+                    </ul>
