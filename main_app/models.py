@@ -38,3 +38,11 @@ class studyMaterial(models.Model):
     def __str__(self):
         return self.title
     
+class newsAndUpdates(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=400)
+    image = models.FileField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title

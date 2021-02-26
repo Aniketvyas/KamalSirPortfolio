@@ -6,7 +6,11 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    news = newsAndUpdates.objects.all()
+    context = {
+        'news':news
+    }
+    return render(request,'index.html',context)
 
 def gallerys(request):
     galler = gallery.objects.all()
