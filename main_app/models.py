@@ -28,6 +28,9 @@ class studentEnrollment(models.Model):
     student = models.ForeignKey('student',on_delete=models.CASCADE)
     subject = models.ForeignKey('subject',on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.student.name
+
 class studyMaterial(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100,blank=True)
@@ -46,3 +49,13 @@ class newsAndUpdates(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class registrationRequest(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=40)
+    email = models.EmailField(max_length=40)
+    password = models.CharField(max_length=100)
+    university = models.CharField(max_length=100)
+    status = models.CharField(max_length=40)
+
