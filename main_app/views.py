@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 from django.contrib import messages
 # Create your views here.
 def index(request):
-    news = newsAndUpdates.objects.all()
+    news = newsAndUpdates.objects.all().order_by('-image')
     context = {
         'news':news
     }
