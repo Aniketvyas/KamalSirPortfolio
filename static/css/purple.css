@@ -19,6 +19,10 @@ body.light #menu li.active a,
     color: #6957af;
 }
 
+.about .box-stats:hover h3 {
+    color: whitesmoke;
+}
+
 .about .resume-box .icon-2,
 .contact ul.social li a:hover,
 body.light.contact ul.social li a:hover,

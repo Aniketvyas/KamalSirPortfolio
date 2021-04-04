@@ -653,6 +653,15 @@ body.light.about .box-stats {
     border: 1px solid #ddd;
 }
 
+.box-stats:hover {
+    background-color: #6957af;
+    color: white;
+}
+
+.box-stats:hover .hover-white {
+    color: white;
+}
+
 body.light.about .c100,
 body.light.about .resume-box .time {
     background-color: #eee;
@@ -2349,32 +2358,10 @@ body.light hr.separator {
     }
 }
 
-HTML CSSResult Skip Results Iframe EDIT ON
-/* Google Fonts */
-
-
-/* @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); */
-
-
-/* Global */
-
-html {
-    min-height: 100%;
-    overflow: hidden;
-}
-
-body {
-    height: calc(100vh - 8em);
-    /* padding: 4em; */
-    /* color: rgba(255, 255, 255, .75); */
-    /* font-family: 'Anonymous Pro', monospace;
-    background-color: rgb(25, 25, 25); */
-}
-
 .line-1 {
     position: relative;
     top: 50%;
-    width: 24em;
+    width: 30em;
     margin: 0 auto;
     border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
@@ -2406,5 +2393,33 @@ body {
     }
     to {
         border-right-color: transparent;
+    }
+}
+
+.social-link {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+}
+
+@media(max-width:610px) {
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+    }
+}
+
+@media(max-width:991px) and (min-width:610px) {
+    .social-link {
+        width: 80px;
+        height: 80px;
+        font-size: 80px;
+    }
+}
+
+@media(max-width:768px) {
+    .owl-nav {
+        display: none !important;
     }
 }
