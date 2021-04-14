@@ -23,7 +23,17 @@ urlpatterns = [
     path('registrationRequest',views.registrationRequests),
     path('registrationRequest/accept/<int:id>',views.acceptRegistrationRequest),
     path('registrationRequest/decline/<int:id>',views.declineRegistrationRequest),
-    path('quizes',views.quizHome)
+    path('quizes',views.quizHome),
+
+    #----------------------Assignment URLS --------------------
+    path('assignments',views.assignmentView),
+    path('createAssignment',views.createAssignmentView),
+    path('subject/<int:id>/createAssignment',views.createAssignmentViewsSecond),
+    path('subject/<int:id>/submitAssignmentData',views.submitAssignmentData),
+    path('viewAssignment',views.viewAssignmentData),
+    path('viewSubmission',views.viewSubmissions),
+    path('submitAssignment/<int:id>',views.submitAssignmentView),
+    path('viewSubmissions/<int:id>',views.viewSubmissionsView)
     #----------------------------------------------------
 ]
 

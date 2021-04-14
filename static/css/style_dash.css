@@ -10,27 +10,21 @@
     .theme-color {
         color: #34495e;
     }
-
-    ::-webkit-scrollbar {
+    
+     ::-webkit-scrollbar {
         width: 10px;
     }
-    
-    
     /* Track */
     
      ::-webkit-scrollbar-track {
         background: #fff;
     }
-    
-    
     /* Handle */
     
      ::-webkit-scrollbar-thumb {
         background: #34495e;
         ;
     }
-
-
     /* navbar */
     
     .sidebar {
@@ -53,11 +47,10 @@
     .sidebar-link {
         transition: all .4s;
     }
-    
-    .sidebar-link:hover {
+    /* .sidebar-link:hover {
         background-color: #444;
         border-radius: 5px;
-    }
+    } */
     
     .current {
         background-color: #f44336;
@@ -93,11 +86,6 @@
         transition: all .4s;
     }
     
-    .search-button:hover {
-        background-color: #eee;
-        transform: translateY(-1px);
-    }
-    
     .icon-parent {
         position: relative;
     }
@@ -122,18 +110,16 @@
             position: static;
         }
     }
-    /* end of navbar */
-    /* cards */
-    
-    .card-common {
+    /*     
+    .card-common-1 {
         box-shadow: 1px 2px 5px #999;
         transition: all .4s;
     }
     
-    .card-common:hover {
+    .card-common-1:hover {
         box-shadow: 2px 3px 15px #999;
         transform: translateY(-1px);
-    }
+    } */
     /* end of cards */
     /* task list */
     
@@ -317,8 +303,7 @@
     Dashboard Timeline Ends!
 ============================================
 */
-    
-    .card-1 {
+    /* .card-1 {
         position: relative;
         display: -ms-flexbox;
         display: flex;
@@ -326,7 +311,7 @@
         flex-direction: column;
         min-width: 0;
         word-wrap: break-word;
-        /* background-color: */
+
         background-clip: border-box;
         border: 1px solid rgba(0, 0, 0, .125);
         border-radius: .25rem;
@@ -336,7 +321,8 @@
         box-shadow: 1px 2px 5px #999;
         transition: all .4s;
     }
-    .card-table{
-        height:500px;
-        overflow:scroll;
-    }
+    
+    .card-table {
+        height: 500px;
+        overflow: scroll;
+    } */

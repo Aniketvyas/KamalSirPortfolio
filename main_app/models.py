@@ -59,3 +59,21 @@ class registrationRequest(models.Model):
     university = models.CharField(max_length=100)
     status = models.CharField(max_length=40)
 
+class assignments(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    startDate = models.DateField()
+    startTime = models.TimeField()
+    deadline = models.DateField()
+    deadlineTime = models.TimeField()
+    assignmentFile = models.FileField()
+    subject = models.ForeignKey('subject', on_delete=models.CASCADE)
+
+
+class submittedAssignment(models.Model):
+    id = models.AutoField(primary_key=True)
+    assignment = models.ForeignKey('assignments',on_delete=models.CASCADE)
+    submittedFile = models.FileField()
+    submitedBy = models.ForeignKey('student',on_delete=models.CASCADE)
+    submited_onDate = models.DateField()
+    submited_onTime = models.TimeField()

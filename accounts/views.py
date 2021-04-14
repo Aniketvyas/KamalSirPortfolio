@@ -15,7 +15,7 @@ def login(request):
             auth.login(request,user)
             return redirect('/dashboard')
         else:
-            return redirect('/login')
+            return redirect('/accounts/login')
     else:
         return render(request,'login.html')
 
